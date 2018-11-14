@@ -36,4 +36,23 @@ public final class EuclidsAlgorithm {
 		return result;
 	}
 
+	/**
+	 * Given two positive integers m and n, find their greatest common divisor, that
+	 * is, the largest positive integer that evenly divides both m and n in an
+	 * efficient manner.
+	 * 
+	 * @param m
+	 * @param n
+	 * @return
+	 */
+	public static int calculateGreatesCommonDivisor(int m, int n) {
+		while (n != 0) {
+			int tmp = n;
+			n = m % n;
+			m = tmp;
+		}
+
+		return m;
+	}
+
 }

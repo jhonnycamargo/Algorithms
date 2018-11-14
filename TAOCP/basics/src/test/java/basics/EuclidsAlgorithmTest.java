@@ -17,7 +17,7 @@ public class EuclidsAlgorithmTest {
 		assertEquals(2, result);
 		result = EuclidsAlgorithm.findGreatesCommonDivisor(10, 10);
 		assertEquals(10, result);
-		result = EuclidsAlgorithm.findGreatesCommonDivisor(119, 544);
+		result = EuclidsAlgorithm.findGreatesCommonDivisor(544, 119);
 		assertEquals(17, result);
 		result = EuclidsAlgorithm.findGreatesCommonDivisor(119, 544);
 		assertEquals(17, result);
@@ -28,5 +28,22 @@ public class EuclidsAlgorithmTest {
 		assertThrows(IllegalArgumentException.class, () -> {
 			EuclidsAlgorithm.findGreatesCommonDivisor(-1, 0);
 		});
+	}
+
+	@DisplayName("Euclid's Algorithm test efficiently.")
+	@Test
+	void testEuclidsAlgorithEfficiently() {
+		int result = EuclidsAlgorithm.calculateGreatesCommonDivisor(10, 2);
+		assertEquals(2, result);
+		result = EuclidsAlgorithm.calculateGreatesCommonDivisor(10, 10);
+		assertEquals(10, result);
+		result = EuclidsAlgorithm.calculateGreatesCommonDivisor(544, 119);
+		assertEquals(17, result);
+		result = EuclidsAlgorithm.calculateGreatesCommonDivisor(20, 15);
+		assertEquals(5, result);
+		result = EuclidsAlgorithm.calculateGreatesCommonDivisor(12, 8);
+		assertEquals(4, result);
+		result = EuclidsAlgorithm.calculateGreatesCommonDivisor(2166, 6099);
+		assertEquals(57, result);
 	}
 }
