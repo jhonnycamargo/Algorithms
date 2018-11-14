@@ -1,8 +1,20 @@
 package basics;
 
-public class EuclidsAlgorithm {
+public final class EuclidsAlgorithm {
 
-	public int findGreatesCommonDivisor(int m, int n) {
+	private EuclidsAlgorithm() {
+		super();
+	}
+
+	/**
+	 * Given two positive integers m and n, find their greatest common divisor, that
+	 * is, the largest positive integer that evenly divides both m and n.
+	 * 
+	 * @param m
+	 * @param n
+	 * @return
+	 */
+	public static int findGreatesCommonDivisor(int m, int n) {
 		if (m <= 0 || n <= 0) {
 			throw new IllegalArgumentException("Arguments must be positive integer values.");
 		}
