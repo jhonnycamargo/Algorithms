@@ -46,4 +46,23 @@ public class EuclidsAlgorithmTest {
 		result = EuclidsAlgorithm.calculateGreatesCommonDivisor(2166, 6099);
 		assertEquals(57, result);
 	}
+	
+	@DisplayName("Extended Euclid's Algorithm.")
+	@Test
+	void testExtendedEuclidsAlgorithEfficiently() {
+		int result = EuclidsAlgorithm.calculateGreatesCommonDivisorExtended(10, 2);
+		assertEquals(2, result);
+		result = EuclidsAlgorithm.calculateGreatesCommonDivisorExtended(10, 10);
+		assertEquals(10, result);
+		result = EuclidsAlgorithm.calculateGreatesCommonDivisorExtended(544, 119);
+		assertEquals(17, result);
+		result = EuclidsAlgorithm.calculateGreatesCommonDivisorExtended(20, 15);
+		assertEquals(5, result);
+		result = EuclidsAlgorithm.calculateGreatesCommonDivisorExtended(12, 8);
+		assertEquals(4, result);
+		result = EuclidsAlgorithm.calculateGreatesCommonDivisorExtended(2166, 6099);
+		assertEquals(57, result);
+		result = EuclidsAlgorithm.calculateGreatesCommonDivisorExtended(1769, 551);
+		assertEquals(29, result);
+	}
 }
